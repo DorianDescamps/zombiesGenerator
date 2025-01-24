@@ -1,38 +1,48 @@
 {% extends "/socle/base.jinja" %}
 
-{% block content%}
-
+{% block content %}
 <div class="txtNbrZombie">
-    <h1>Vous avez généré {{nbr_zombies}} zombies !</h1>
+    <h1>Vous avez généré {{ nbr_zombies }} zombies !</h1>
 </div>
 {% for n in range(nbr_zombies) %}
 <div class="txtNbrTotalZombie">
-    <h1>C'est le zombie numéro : {{n+1}}</h1>
+    <h1>C'est le zombie numéro : {{ n+1 }}</h1>
 </div>
 <div class="containerZombie">
-    <div class="zombie">
+    <div class="zombie {% if rotate %}zombierotate{% endif %}">
         <div class="generateurZombie">
+            {% if zombies[n]['head'] %}
             <div class="Head">
-                <img class="imgZombie" src={{random_head_files[n]}}>
+                <img class="imgZombie" src="{{ zombies[n]['head'] }}">
             </div>
+            {% endif %}
+            {% if zombies[n]['L_arm'] %}
             <div class="LeftArm">
-                <img class="imgZombie" src={{random_Larm_files[n]}}>
+                <img class="imgZombie" src="{{ zombies[n]['L_arm'] }}">
             </div>
+            {% endif %}
+            {% if zombies[n]['body'] %}
             <div class="Body">
-                <img class="imgZombie" src={{random_body_files[n]}}>
+                <img class="imgZombie" src="{{ zombies[n]['body'] }}">
             </div>
+            {% endif %}
+            {% if zombies[n]['R_arm'] %}
             <div class="RightArm">
-                <img class="imgZombie" src={{random_Rarm_files[n]}}>
+                <img class="imgZombie" src="{{ zombies[n]['R_arm'] }}">
             </div>
+            {% endif %}
+            {% if zombies[n]['L_leg'] %}
             <div class="LeftLeg">
-                <img class="imgZombie" src={{random_Lleg_files[n]}}>
+                <img class="imgZombie" src="{{ zombies[n]['L_leg'] }}">
             </div>
+            {% endif %}
+            {% if zombies[n]['R_leg'] %}
             <div class="RightLeg">
-                <img class="imgZombie" src={{random_Rleg_files[n]}}>
+                <img class="imgZombie" src="{{ zombies[n]['R_leg'] }}">
             </div>
+            {% endif %}
         </div>
     </div>
 </div>
 {% endfor %}
-
 {% endblock content %}
