@@ -1,7 +1,5 @@
 from flask import Flask, render_template
 from http import HTTPStatus
-import random
-import os
 
 app = Flask(__name__)
 

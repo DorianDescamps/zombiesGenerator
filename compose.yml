@@ -11,6 +11,5 @@ services:
       - FLASK_RUN_HOST=0.0.0.0
       - FLASK_RUN_PORT=8080
     command: >
-      sh -c "pip install pipenv &&
-        pipenv install --system --deploy &&
+      sh -c "pip install --no-cache-dir -r requirements.txt &&
         flask run"
