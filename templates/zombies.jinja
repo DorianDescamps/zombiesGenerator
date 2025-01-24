@@ -1,0 +1,38 @@
+{% extends "/socle/base.jinja" %}
+
+{% block content%}
+
+<div class="txtNbrZombie">
+    <h1>Vous avez généré {{nbr_zombies}} zombies !</h1>
+</div>
+{% for n in range(nbr_zombies) %}
+<div class="txtNbrTotalZombie">
+    <h1>C'est le zombie numéro : {{n+1}}</h1>
+</div>
+<div class="containerZombie">
+    <div class="zombie">
+        <div class="generateurZombie">
+            <div class="Head">
+                <img class="imgZombie" src={{random_head_files[n]}}>
+            </div>
+            <div class="LeftArm">
+                <img class="imgZombie" src={{random_Larm_files[n]}}>
+            </div>
+            <div class="Body">
+                <img class="imgZombie" src={{random_body_files[n]}}>
+            </div>
+            <div class="RightArm">
+                <img class="imgZombie" src={{random_Rarm_files[n]}}>
+            </div>
+            <div class="LeftLeg">
+                <img class="imgZombie" src={{random_Lleg_files[n]}}>
+            </div>
+            <div class="RightLeg">
+                <img class="imgZombie" src={{random_Rleg_files[n]}}>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock content %}

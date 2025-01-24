@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: calc(1.2vw + 1.1vh + 1vmin);
+}
+
+@keyframes color {
+  0%   { background: #33CCCC; }
+  10%  { background: #33CC36; }
+  20%  { background: #B8CC33; }
+  30%  { background: #FCCA00; }
+  40%  { background: #FCA300; }
+  50%  { background: #FC6D00; }
+  60%  { background: #fc0000c5; }
+  70%  { background: #FC00A3; }
+  80%  { background: #33CC36; }
+  90%  { background: #2791ac; }
+  100% { background: #33CCCC; }
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+body{
+    animation: color 8s infinite linear;
+}
+
+.text{
+  text-align: center;
+  margin-top: 1%;
+}
+
+.container_links{
+  border: 3mm ridge rgba(211, 220, 50, .6);
+  justify-content: flex-start;
+  display: flex;
+  overflow :inherit;
+  justify-content: center;
+  margin-top: 0.5%;
+}
+
+.links{
+  text-align: center;
+  margin-top: 0;
+  justify-content: space-evenly;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: white;
+}
+
+.navbar{
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+.splashscreen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  height: auto;
+  animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+.txtNbrZombie{
+  text-align: center;
+}
+
+.txtNbrTotalZombie{
+  text-align: center;
+}
+
+.containerZombie{
+  display: flex;
+  justify-content: center;
+}
+
+.Zombie{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+@keyframes rotationLoop {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.zombierotate{
+  animation: rotationLoop 2s infinite;
+}
+
+.generateurZombie {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". Head Head ."
+      ". Head Head . "
+      "LeftArm Body Body RightArm"
+      "LeftArm Body Body RightArm"
+      "LeftArm Body Body RightArm"
+      ". LeftLeg RightLeg ."
+      ". LeftLeg RightLeg ."
+      ". LeftLeg RightLeg .";
+    height: 60vh;
+}
+
+.Head { grid-area: Head; }
+
+.LeftArm { grid-area: LeftArm; }
+
+.Body { grid-area: Body; }
+
+.RightArm { grid-area: RightArm; }
+
+.LeftLeg { grid-area: LeftLeg; }
+
+.RightLeg { grid-area: RightLeg; }
+
+.imgZombie{
+  width: 100%;
+  height: 100%;
+}
