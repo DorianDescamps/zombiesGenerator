@@ -1,5 +1,6 @@
 services:
-  flask_app:
+  zombies:
+    container_name: zombies
     image: python:3.13-alpine
     ports:
       - "8081:8080"
