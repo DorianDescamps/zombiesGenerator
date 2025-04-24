@@ -20,7 +20,7 @@ Une application Flask modulaire (avec Blueprint) permettant de générer des per
 ### Avec Docker Compose
 
 ```bash
-git clone <URL_DU_DEPOT>
+git clone https://github.com/DorianDescamps/zombiesGenerator
 cd zombiesGenerator
 docker compose up -d
 ```
@@ -30,7 +30,7 @@ L'application sera disponible sur : `http://localhost:8081`
 ### Sans Docker
 
 ```bash
-git clone <URL_DU_DEPOT>
+git clone https://github.com/DorianDescamps/zombiesGenerator
 cd zombiesGenerator
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
