@@ -1,4 +1,4 @@
-# zombiesGenerator# Zombie Generator Web App
+# Zombie Generator Web App
 
 Une application Flask modulaire (avec Blueprint) permettant de générer des personnages zombies de manière aléatoire ou exhaustive, en assemblant différentes parties du corps.
 
