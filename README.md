@@ -22,7 +22,16 @@ Une application Flask modulaire (avec Blueprint) permettant de générer des per
 ```bash
 git clone https://github.com/DorianDescamps/zombiesGenerator
 cd zombiesGenerator
-docker compose up -d
+```
+
+#### Mode développement (Hot reload)
+```bash
+docker compose up --build -d
+```
+
+#### Mode production
+```bash
+docker compose -f compose.prod.yml -f compose.override.yml up --build -d
 ```
 
 L'application sera disponible sur : `http://localhost:8081`
@@ -94,6 +103,6 @@ zombiesGenerator/          # Racine du projet
 ![1 Zombie /zombie](screenshots/1.png)
 ![tourne /zombietourne](screenshots/tourne.png)
 
-## Auteurs
+## Auteur
 
 - Dorian Descamps <dorian.descamps601@gmail.com>

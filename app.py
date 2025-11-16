@@ -12,4 +12,4 @@ def index():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return 'Erreur !!! /!\ Page Inexistante /!\ seul /zombie , /zombietourne , /zombies/"nb" , /zombiesall existe !', HTTPStatus.NOT_FOUND
+    return r'Erreur !!! /!\ Page Inexistante /!\ seul /zombie , /zombietourne , /zombies/"nb" , /zombiesall existe !', HTTPStatus.NOT_FOUND

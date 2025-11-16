@@ -1,0 +1,7 @@
+services:
+  zombies:
+    container_name: zombies-prod
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8080:8080"

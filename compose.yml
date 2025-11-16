@@ -1,15 +1,16 @@
 services:
   zombies:
-    container_name: zombies
-    image: python:3.13-alpine
+    container_name: zombies-dev
+    build: .
+    restart: unless-stopped
     ports:
-      - "8081:8080"
+      - "8080:8080"
+
     volumes:
       - .:/app
-    working_dir: /app
+
     environment:
-      - FLASK_APP=app.py
-      - FLASK_RUN_HOST=0.0.0.0
-      - FLASK_RUN_PORT=8080
+      - FLASK_DEBUG=true
+    
     command: >
-      sh -c "pip install --no-cache-dir -r requirements.txt && flask run"
+      sh -c "flask run --host=0.0.0.0 --port=8080"
